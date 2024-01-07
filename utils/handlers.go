@@ -5,7 +5,7 @@ import (
 )
 
 func StartHandle(w http.ResponseWriter, r *http.Request) {
-	http.FileServer(http.Dir("../static"))
+	http.ServeFile(w, r, "../static/index.html")
 
 }
 func FileHandler(w http.ResponseWriter, r *http.Request) {
